@@ -39,10 +39,12 @@ add_executable(Demo main.cc MathFunctions.cc)
 #aux_source_directory(<dir> <variable>)
 #该命令会查找指定目录下的所有源文件，然后将结果存进指定变量名
 
+# 查找当前目录下的所有源文件
+# 并将名称保存到 DIR_SRCS 变量
 cmake_minimum_required(VERSION 2.8)
-aux_source_directory(. ALLCPP)
+aux_source_directory(. DIR_SRCS)
 project(demo2)
-add_executable(Demo ${ALLCPP})
+add_executable(Demo ${DIR_SRCS})
 
 
 ```
